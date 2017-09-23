@@ -184,9 +184,9 @@ The Concurrency Utilities for Java EE are not part of the Java EE Web profile, w
 ### Some final thoughts
 Those of you with eagle eyes will notice that there is a flaw in this logic: It isn’t very fault-tolerant. If I have a 90-minute meeting and the server crashes or restarts, the meeting will still never end. There are ways (he writes mysteriously) to solve this problem but that is an exercise for another day.
 
+### Running the application
 There are two ways to get the application running from within WDT:
 
-### Running the application
  * The first is to use Maven to build and run the project:
  1. Run the Maven `install` goal to build and test the project: Right-click **pom.xml** in the `meetings` project, click **Run As… > Maven Build…**, then in the **Goals** field type `install` and click **Run**. The first time you run this goal, it might take a few minutes to download the Liberty dependencies.
  2. Run a Maven build for the `liberty:start-server goal`: Right-click **pom.xml**, click **Run As… > Maven Build**, then in the **Goals** field, type `liberty:start-server` and click **Run**. This starts the server in the background.
