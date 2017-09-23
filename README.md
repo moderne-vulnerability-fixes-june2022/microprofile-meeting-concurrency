@@ -198,4 +198,4 @@ There are two ways to get the application running from within WDT:
 Find out more about [MicroProfile and WebSphere Liberty](https://developer.ibm.com/wasdev/docs/microprofile/).
 
 ## Next Steps
-Part 3: [MicroProfile Meeting Application - WebSockets](https://github.com/IBM/microprofile-meeting-websockets)
+Part 3: [MicroProfile Meeting Application - Using WebSockets and CDI events](https://github.com/IBM/microprofile-meeting-websockets)
