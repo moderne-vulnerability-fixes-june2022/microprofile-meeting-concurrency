@@ -15,8 +15,6 @@ Adapted from the blog post: [Writing a simple MicroProfile application: Using Ja
    2. Launch the Eclipse Marketplace: **Help** -> **Eclipse Marketplace**
    3. Search for **IBM Websphere Application Liberty Developer Tools**, and click **Install** with the defaults configuration selected
  * [Git](https://git-scm.com/downloads)
- * [Bluemix Account](https://www.bluemix.net)
- * [Bluemix CLI](https://clis.ng.bluemix.net/ui/home.html)
  
 ## Steps
 ### Step 1. Check out the source code
@@ -38,9 +36,15 @@ $    git clone https://github.com/IBM/microprofile-meeting-concurrency.git
 7. Switch to the Java EE perspective.
 8. The meetings project is automatically created in the Project Explorer view.
 
-### Step 2. Deploy MongoDB Instance in Bluemix
-1. Log in to your [Bluemix Account](https://www.bluemix.net)
-2. Deploy a [Compose for MongoDB](https://console.bluemix.net/catalog/services/compose-for-mongodb) instance.
+### Step 2. Installing MongoDB
+If you completed the previous labs and installed MongoDB, make sure MongoDB is running. If you are starting fresh, make sure you install MongoDB. Depending on what platform you are on the installation instructions may be different. For this exercise you should get the community version of MongoDB from the [mongoDB download-center](https://www.mongodb.com/download-center#community).
+
+1. Once installed you can run the MongoDB database daemon using:
+```bash
+mongod -dbpath <path to database>
+```
+
+The database needs to be running for the application to work. If it is not running there will be a lot of noise in the server logs.
 
 ### Step 3. Updating the application to compile against the Concurrency API for Java EE
 To start writing code the Maven `pom.xml` needs to be updated to indicate the dependency on the Concurrency API for Java EE:
